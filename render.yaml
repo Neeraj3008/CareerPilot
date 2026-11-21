@@ -34,7 +34,7 @@ services:
   - type: web
     name: careerpilot-frontend
     runtime: static
-    region: oregon
+    
     plan: free
     branch: main
     rootDir: frontend
