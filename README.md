@@ -164,8 +164,10 @@ git push -u origin main
    - **`careerpilot-postgres`**: PostgreSQL database with `pgvector` extension.
    - **`careerpilot-backend`**: FastAPI web service with automatic database URL binding and `/healthz` health checks.
    - **`careerpilot-frontend`**: React static site with SPA routing rewrites.
-5. In the backend service environment variables, add your **`GEMINI_API_KEY`**.
-6. Click **Apply**. Render will automatically provision the database, install requirements, and deploy both services!
+5. In the backend service environment variables, set:
+   - **`GEMINI_API_KEY`** to your Google Gemini API key.
+   - **`CORS_ORIGINS`** to your deployed frontend URL (for example, `https://careerpilot-frontend.onrender.com`). Separate multiple origins with commas.
+6. Click **Apply**. Render will automatically provision the database, install requirements, and deploy both services.
 
 ---
 

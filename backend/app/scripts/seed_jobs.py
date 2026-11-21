@@ -116,13 +116,14 @@ def seed_jobs_dataset(db: Session):
 
     print("Seeding initial jobs dataset...")
     for item in INITIAL_JOBS:
-        skills = item.pop("skills")
+        job_data = dict(item)
+        skills = job_data.pop("skills")
         skills_text = ", ".join(skills)
-        embed_text = f"Title: {item['title']}. Company: {item['company']}. Location: {item['location']}. Skills: {skills_text}. Description: {item['description']}"
+        embed_text = f"Title: {job_data['title']}. Company: {job_data['company']}. Location: {job_data['location']}. Skills: {skills_text}. Description: {job_data['description']}"
         job_emb = get_embedding(embed_text)
 
         job = Job(
-            **item,
+            **job_data,
             embedding=job_emb
         )
         db.add(job)

@@ -30,6 +30,7 @@ services:
       SECRET_KEY: dev-super-secret-jwt-key-change-in-prod-12345
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       GEMINI_MODEL: gemini-1.5-flash
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
       PORT: 8000
     ports:
       - "8000:8000"

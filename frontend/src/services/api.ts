@@ -4,7 +4,17 @@ import {
   SavedJob, UserPreferences, ChatMessage 
 } from '../types';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api/v1';
+const configuredApiUrl = import.meta.env.VITE_API_URL?.trim();
+const normalizedApiUrl = configuredApiUrl
+  ? configuredApiUrl.match(/^https?:\/\//i)
+    ? configuredApiUrl.replace(/\/+$/, '')
+    : `https://${configuredApiUrl.replace(/\/+$/, '')}`
+  : '';
+const API_BASE = normalizedApiUrl
+  ? normalizedApiUrl.endsWith('/api/v1')
+    ? normalizedApiUrl
+    : `${normalizedApiUrl}/api/v1`
+  : '/api/v1';
 
 export const apiClient = axios.create({
   baseURL: API_BASE,
