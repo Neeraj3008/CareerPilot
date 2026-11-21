@@ -1,0 +1,46 @@
+{
+  "queries": [
+    {
+      "query_id": "q1",
+      "query": "Senior AI Machine Learning Engineer LLM RAG PyTorch",
+      "relevant_titles": [
+        "Senior AI / Machine Learning Engineer",
+        "Full-Stack AI Engineer",
+        "Data Scientist & NLP Specialist"
+      ]
+    },
+    {
+      "query_id": "q2",
+      "query": "React TypeScript Tailwind CSS Frontend Architect",
+      "relevant_titles": [
+        "Frontend React / TypeScript Architect",
+        "Full-Stack AI Engineer"
+      ]
+    },
+    {
+      "query_id": "q3",
+      "query": "Backend Python FastAPI PostgreSQL distributed systems",
+      "relevant_titles": [
+        "Backend Python Platform Engineer",
+        "Full-Stack AI Engineer",
+        "Junior Python / FastAPI Developer"
+      ]
+    },
+    {
+      "query_id": "q4",
+      "query": "DevOps Cloud Kubernetes Docker CI/CD AWS",
+      "relevant_titles": [
+        "DevOps & Cloud Infrastructure Engineer",
+        "Backend Python Platform Engineer"
+      ]
+    },
+    {
+      "query_id": "q5",
+      "query": "Search recommendation systems algorithms vector",
+      "relevant_titles": [
+        "Staff Search & Recommendation Systems Engineer",
+        "Senior AI / Machine Learning Engineer"
+      ]
+    }
+  ]
+}
