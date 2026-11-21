@@ -5,7 +5,7 @@ services:
   - type: web
     name: careerpilot-backend
     runtime: python
-    region: oregon
+    
     plan: free
     branch: main
     rootDir: backend
