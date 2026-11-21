@@ -35,7 +35,7 @@ services:
     name: careerpilot-frontend
     runtime: static
     
-    plan: free
+    
     branch: main
     rootDir: frontend
     buildCommand: npm install && npm run build
